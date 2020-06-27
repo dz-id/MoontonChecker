@@ -243,18 +243,21 @@ def from_file():
   ):
     for data in open(
       list,
-      'r'
+      'r',
+      encoding='utf-8'
     ).readlines(
       ):
       prox = data.strip(
       ).split(
         ':'
       )
-      if prox[0] and prox[1]:
-        proxy_list.append({
-          'http': 'http://'+data.strip(),
-          'https': 'https://'+data.strip(),
-        })
+      try:
+        if prox[0] and prox[1]:
+          proxy_list.append({
+            'http': 'http://'+data.strip(),
+            'https': 'https://'+data.strip(),
+          })
+      except: pass
     if len(
       proxy_list
     ) != 0:

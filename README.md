@@ -1,6 +1,8 @@
 # MOONTON ACCOUNT CHECKER
 
-[!IMG](ss.png)
+Can only be run in python3
+
+![IMG](ss.png)
 
 ## Install
 ```
